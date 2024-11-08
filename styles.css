@@ -149,3 +149,25 @@ footer {
     text-align: center;
     padding: 1.5em;
 }
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    color: #e0e5ec;
+}
+
+.contact-info li {
+    font-size: 1.1em;
+    margin: 0.5em 0;
+}
+
+.contact-info a {
+    color: #4da1ff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #76b2ff;
+}
+
