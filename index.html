@@ -1,66 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextWave Learning</title>
-    <link rel="stylesheet" href="styles.css">
+<title>NextWave Learning</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
 </head>
-<body>
+<body class="w3-light-grey">
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">
-                <h1>NextWave Learning</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- Container for fixed-width content -->
+<div class="w3-content" style="max-width:1400px">
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <div class="hero-content">
-            <h2>Welcome to NextWave Learning</h2>
-            <p>Your journey to knowledge and growth begins here.</p>
-            <a href="#about" class="cta-button">Learn More</a>
-        </div>
-    </section>
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>NextWave Learning</b></h1>
+  <p>Your journey to knowledge and growth begins here.</p>
+</header>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Nextwave Learning strives to teach the foundations of STEM to students.</p>
-    </section>
+<!-- Grid -->
+<div class="w3-row">
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Our Services</h2>
-        <div class="service-item">
-            <h3>Lego Robotics Course</h3>
-            <p>Using Lego Spike Essential kits, students can learn the fundamentals of coding and robotics, through a 10 week course with 20 lessons.</p>
-        </div>
-    </section>
-    
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you would like to get in touch, here is our contact information:</p>
-        <ul class="contact-info">
-            <li><strong>Name:</strong> Rajeev Thundiyil</li>
-            <li><strong>Email:</strong> rajeev.thundiyil@nextwavelogic.com </li>
-        </ul>
-    </section>
+<!-- Main Content -->
+<div class="w3-col l8 s12">
+  <!-- Hero Section -->
+  <div class="w3-card-4 w3-margin w3-white">
+    <img src="your-image.jpg" alt="Learning" style="width:100%">
+    <div class="w3-container">
+      <h2>Welcome to NextWave Learning</h2>
+      <p>Your journey to knowledge and growth begins here.</p>
+      <a href="#about" class="w3-button w3-padding-large w3-white w3-border">Learn More</a>
+    </div>
+  </div>
+  <hr>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 NextWave Learning. All rights reserved.</p>
-    </footer>
+  <!-- About Section -->
+  <div class="w3-card-4 w3-margin w3-white" id="about">
+    <div class="w3-container">
+      <h3><b>About Us</b></h3>
+      <p>NextWave Learning strives to teach the foundations of STEM to students.</p>
+    </div>
+  </div>
+  <hr>
 
+  <!-- Services Section -->
+  <div class="w3-card-4 w3-margin w3-white" id="services">
+    <div class="w3-container">
+      <h3><b>Our Services</b></h3>
+      <p><strong>Lego Robotics Course:</strong> Using Lego Spike Essential kits, students can learn the fundamentals of coding and robotics in a 10-week course with 20 lessons.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar Content -->
+<div class="w3-col l4">
+  <!-- Contact Section -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Contact Us</h4>
+      <p>If you would like to get in touch, here is our contact information:</p>
+      <ul class="w3-ul">
+        <li><strong>Name:</strong> Rajeev Thundiyil</li>
+        <li><strong>Email:</strong> rajeev.thundiyil@nextwavelogic.com</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- END Grid -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <p>&copy; 2024 NextWave Learning. All rights reserved.</p>
+</footer>
+
+</div>
 </body>
 </html>
 
