@@ -8,152 +8,138 @@
 
 /* Body Styling */
 body {
-    background-color: #0b1d42; /* Dark blue background */
-    color: #e0e5ec; /* Light text color */
-    line-height: 1.6;
+    background-color: #1a1a2e;
+    color: #e0e5ec;
 }
 
-/* Header */
+/* Header Styling */
 header {
-    background-color: #16254a; /* Slightly lighter blue */
-    padding: 1em 0;
+    background-color: #16213e;
+    padding: 1rem;
+    text-align: center;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
-    margin: auto;
-    padding: 0 1.5em;
-}
-
-.logo h1 {
-    color: #ffffff;
-    font-size: 1.8em;
+header .logo h1 {
+    font-size: 2rem;
+    color: #4da1ff;
+    margin-bottom: 0.5rem;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1em;
+    justify-content: center;
+    gap: 1.5rem;
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: #e0e5ec;
     text-decoration: none;
     font-weight: bold;
 }
 
 .nav-links a:hover {
-    color: #4da1ff; /* Light blue accent */
+    color: #76b2ff;
 }
 
-/* Hero Section */
+/* Hero Section Styling */
 #hero {
-    background: linear-gradient(45deg, #1b2f57, #0b1d42);
-    padding: 3em 1.5em;
     text-align: center;
-    color: #ffffff;
+    padding: 4rem 1rem;
+    background-color: #0f3460;
 }
 
 .hero-content h2 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
+    font-size: 2.5rem;
+    color: #e0e5ec;
 }
 
 .hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 1.5em;
+    font-size: 1.2rem;
+    color: #a5b9d6;
+    margin: 1rem 0;
 }
 
 .cta-button {
     background-color: #4da1ff;
-    color: #0b1d42;
-    padding: 0.8em 1.5em;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
     border-radius: 5px;
-    font-weight: bold;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .cta-button:hover {
     background-color: #76b2ff;
 }
 
-/* Section Styling */
-section {
-    max-width: 800px;
-    margin: auto;
-    padding: 3em 1.5em;
+/* About Section Styling */
+#about {
     text-align: center;
+    padding: 2rem 1rem;
 }
 
-#services .service-item {
-    margin-bottom: 2em;
-}
-
-/* Testimonials */
-#testimonials .testimonial {
-    margin: 2em auto;
-    padding: 1.5em;
-    background-color: #142445;
-    border-radius: 8px;
-    color: #b3c2d6;
-}
-
-#testimonials span {
-    display: block;
-    margin-top: 1em;
-    font-style: italic;
+#about h2 {
+    font-size: 2rem;
     color: #4da1ff;
 }
 
-/* Contact Form */
-#contact form {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+#about p {
+    max-width: 800px;
+    margin: 1rem auto;
+    color: #e0e5ec;
 }
 
-#contact label {
-    color: #ffffff;
-    font-weight: bold;
-}
-
-#contact input, #contact textarea {
-    padding: 0.8em;
-    border: 1px solid #4da1ff;
-    border-radius: 4px;
-    background-color: #1c2e54;
-    color: #ffffff;
-}
-
-#contact button {
-    padding: 0.8em;
-    background-color: #4da1ff;
-    border: none;
-    color: #0b1d42;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#contact button:hover {
-    background-color: #76b2ff;
-}
-
-/* Footer */
-footer {
-    background-color: #16254a;
+/* Services Section Styling */
+#services {
+    padding: 2rem 1rem;
+    background-color: #0f3460;
     color: #e0e5ec;
     text-align: center;
-    padding: 1.5em;
+}
+
+#services h2 {
+    font-size: 2rem;
+    color: #4da1ff;
+    margin-bottom: 1rem;
+}
+
+.service-item {
+    max-width: 800px;
+    margin: 1rem auto;
+    text-align: left;
+}
+
+.service-item h3 {
+    color: #76b2ff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Section Styling */
+#contact {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #4da1ff;
+    margin-bottom: 1rem;
+}
+
+#contact p {
+    color: #a5b9d6;
+    max-width: 600px;
+    margin: 0.5rem auto 1rem;
 }
 
 .contact-info {
     list-style: none;
     padding: 0;
-    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
     color: #e0e5ec;
 }
 
@@ -162,12 +148,16 @@ footer {
     margin: 0.5em 0;
 }
 
-.contact-info a {
+.contact-info li strong {
     color: #4da1ff;
-    text-decoration: none;
 }
 
-.contact-info a:hover {
-    color: #76b2ff;
+/* Footer Styling */
+footer {
+    background-color: #16213e;
+    color: #e0e5ec;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
 }
 
