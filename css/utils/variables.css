@@ -1,0 +1,25 @@
+:root {
+    /* Colors */
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --accent-color: #f59e0b;
+    --text-color: #1f2937;
+    --light-bg: #f3f4f6;
+    --white: #ffffff;
+    
+    /* Spacing */
+    --container-width: 1200px;
+    --container-padding: 1rem;
+    --section-padding: 6rem;
+    
+    /* Border Radius */
+    --border-radius-sm: 10px;
+    --border-radius-md: 20px;
+    
+    /* Box Shadow */
+    --shadow-sm: 0 4px 6px rgba(0,0,0,0.1);
+    --shadow-md: 0 10px 30px rgba(0,0,0,0.1);
+    
+    /* Transitions */
+    --transition-normal: all 0.3s ease;
+} 
