@@ -1,35 +1,49 @@
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
                 url('../assets/images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
-    color: var(--white);
-    padding: 8rem 0;
-    text-align: center;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
+    color: var(--white);
+    padding: 6rem 0;
 }
 
-.hero-section h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
     font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
-.cta-buttons {
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin-top: 2rem;
 }
 
 .cta-button {
+    display: inline-block;
     padding: 1rem 2rem;
     border-radius: 50px;
-    text-decoration: none;
     font-weight: 500;
-    transition: var(--transition-normal);
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .cta-button.primary {
@@ -37,8 +51,41 @@
     color: var(--white);
 }
 
+.cta-button.primary:hover {
+    background: var(--accent-color-dark);
+    transform: translateY(-2px);
+}
+
 .cta-button.secondary {
     background: transparent;
     border: 2px solid var(--white);
     color: var(--white);
+}
+
+.cta-button.secondary:hover {
+    background: var(--white);
+    color: var(--text-color);
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
 } 
