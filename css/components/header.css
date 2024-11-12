@@ -18,10 +18,15 @@
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2563eb;
     text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #1d4ed8;
 }
 
 .nav-links {
