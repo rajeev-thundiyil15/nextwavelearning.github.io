@@ -1,41 +1,30 @@
 .class-card {
     background: var(--white);
     border-radius: var(--border-radius-md);
-    overflow: hidden;
+    padding: 2rem;
+    text-align: left;
     box-shadow: var(--shadow-md);
 }
 
-.class-image {
+.class-card img {
     width: 100%;
     height: 250px;
-    overflow: hidden;
-}
-
-.class-image img {
-    width: 100%;
-    height: 100%;
     object-fit: cover;
-    object-position: center;
-    transition: transform 0.3s ease;
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 1.5rem;
 }
 
-/* Add proper padding to content area */
-.class-content {
-    padding: 2rem;
-}
-
-.class-content h3 {
+.class-card h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
     color: var(--text-color);
 }
 
-.class-content p {
+.class-card p {
     color: var(--text-color-light);
     margin-bottom: 1.5rem;
 }
 
-/* Style the features list */
 .class-features {
     margin: 1.5rem 0;
     padding-left: 0;
@@ -53,26 +42,25 @@
     color: var(--accent-color);
 }
 
-/* Style the button */
-.class-button {
+/* Using the same cta-button styling as other buttons */
+.class-card .cta-button {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
-    background-color: var(--primary-color);
-    color: white;
-    text-decoration: none;
+    padding: 1rem 2rem;
     border-radius: 50px;
+    text-decoration: none;
     font-weight: 500;
-    transition: all 0.3s ease;
-    text-align: center;
-    border: none;
-    cursor: pointer;
+    transition: var(--transition-normal);
     margin-top: 1rem;
 }
 
-.class-button:hover {
-    background-color: var(--primary-color-dark);
+.class-card .cta-button.primary {
+    background: var(--accent-color);
+    color: var(--white);
+}
+
+.class-card .cta-button.primary:hover {
+    background: var(--accent-color-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* Optional: Add hover effect */
