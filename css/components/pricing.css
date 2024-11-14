@@ -70,3 +70,68 @@
     text-decoration: none;
     transition: var(--transition-normal);
 } 
+
+
+
+/* Add these media queries at the bottom of the file */
+@media (max-width: 768px) {
+    .pricing-grid {
+        gap: 1.5rem;  /* Reduce gap between cards */
+        margin-top: 2rem;  /* Reduce top margin */
+    }
+
+    .pricing-card {
+        padding: 1.5rem;  /* Slightly reduce padding */
+    }
+
+    .pricing-card.featured {
+        transform: scale(1.03);  /* Slightly reduce scale effect */
+    }
+
+    .price {
+        font-size: 2.5rem;  /* Smaller price text */
+    }
+
+    .price .currency {
+        font-size: 1.25rem;  /* Adjust currency size */
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-section {
+        padding: calc(var(--section-padding) * 0.75) 0;  /* Reduce section padding */
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;  /* Single column on mobile */
+        gap: 1.25rem;  /* Further reduce gap */
+        margin-top: 1.5rem;
+    }
+
+    .pricing-card {
+        padding: 1.25rem;  /* Further reduce padding */
+    }
+
+    .pricing-card.featured {
+        transform: scale(1);  /* Remove scale effect on mobile */
+        border-width: 3px;  /* Make border more prominent instead */
+    }
+
+    .price {
+        font-size: 2.25rem;  /* Even smaller price */
+        margin: 0.75rem 0;
+    }
+
+    .pricing-features {
+        margin: 1.5rem 0;  /* Reduce margin */
+    }
+
+    .pricing-features li {
+        padding: 0.4rem 0;  /* Tighter list spacing */
+    }
+
+    .pricing-button {
+        padding: 0.875rem 1.75rem;  /* Slightly smaller button */
+        width: 100%;  /* Full width button on mobile */
+    }
+}
