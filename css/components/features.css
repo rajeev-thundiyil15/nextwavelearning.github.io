@@ -28,3 +28,47 @@
     color: var(--accent-color);
     margin-bottom: 1rem;
 } 
+
+
+
+/* Add these media queries at the bottom of the file */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns on tablet */
+        gap: 1.5rem;  /* Slightly reduce gap */
+        margin-top: 2rem;  /* Reduce top margin */
+    }
+
+    .feature-card {
+        padding: 1.5rem;  /* Slightly reduce padding */
+    }
+
+    .feature-card i {
+        font-size: 2rem;  /* Slightly smaller icons */
+    }
+}
+
+@media (max-width: 480px) {
+    .features-section {
+        padding: calc(var(--section-padding) * 0.75) 0;  /* Reduce section padding */
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;  /* Single column on mobile */
+        gap: 1rem;  /* Further reduce gap */
+        margin-top: 1.5rem;  /* Reduce top margin more */
+    }
+
+    .feature-card {
+        padding: 1.25rem;  /* Even smaller padding */
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);  /* Smaller hover effect */
+    }
+
+    .feature-card i {
+        font-size: 1.75rem;  /* Even smaller icons */
+        margin-bottom: 0.75rem;  /* Reduce bottom margin */
+    }
+}

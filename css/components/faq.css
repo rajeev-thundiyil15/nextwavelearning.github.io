@@ -48,3 +48,45 @@
     padding: 0 1.5rem 1.5rem;
     max-height: 1000px;
 } 
+
+
+
+
+/* Add these media queries at the bottom of the file */
+@media (max-width: 768px) {
+    .faq-grid {
+        max-width: 100%;  /* Full width on tablets */
+        margin: 2rem auto 0;  /* Reduce top margin */
+    }
+
+    .faq-question {
+        padding: 1.25rem;  /* Slightly reduce padding */
+    }
+
+    .faq-question h3 {
+        font-size: 1rem;  /* Slightly smaller text */
+        padding-right: 1rem;  /* Space for icon */
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-section {
+        padding: calc(var(--section-padding) * 0.75) 0;  /* Reduce section padding */
+    }
+
+    .faq-grid {
+        margin: 1.5rem auto 0;  /* Further reduce margin */
+    }
+
+    .faq-question {
+        padding: 1rem;  /* Smaller padding */
+    }
+
+    .faq-item.active .faq-answer {
+        padding: 0 1rem 1rem;  /* Smaller padding when open */
+    }
+
+    .faq-answer {
+        font-size: 0.9rem;  /* Slightly smaller text */
+    }
+}

@@ -65,3 +65,50 @@
     cursor: pointer;
     transition: var(--transition-normal);
 } 
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: calc(var(--section-padding) * 0.75) 0;  /* Reduce section padding */
+    }
+
+    .contact-form {
+        padding: 1rem;  /* Further reduce padding */
+    }
+
+    .contact-item {
+        margin-bottom: 1rem;  /* Tighter spacing */
+    }
+
+    .contact-item i {
+        font-size: 1.25rem;  /* Slightly smaller icons */
+    }
+
+    .form-group {
+        margin-bottom: 1rem;  /* Reduce spacing */
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.75rem;  /* Smaller input padding */
+    }
+
+    .submit-button {
+        padding: 0.75rem;  /* Smaller button padding */
+    }
+}
+
+/* Add these media queries at the bottom of the file */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;  /* Stack sections vertically */
+        gap: 2rem;  /* Reduce gap */
+    }
+
+    .contact-info {
+        padding-right: 0;  /* Remove right padding since it's stacked */
+    }
+
+    .contact-form {
+        padding: 1.5rem;  /* Slightly reduce padding */
+    }
+}

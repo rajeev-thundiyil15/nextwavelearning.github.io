@@ -59,3 +59,51 @@
     cursor: pointer;
     transition: var(--transition-normal);
 } 
+
+
+
+/* Add these media queries at the bottom of the file */
+@media (max-width: 768px) {
+    .popup-content {
+        padding: 1.5rem;  /* Reduce padding */
+        width: 95%;  /* Slightly wider on tablets */
+        max-width: 450px;
+    }
+
+    .close-popup {
+        top: 0.75rem;
+        right: 0.75rem;
+        font-size: 1.25rem;  /* Slightly smaller close button */
+    }
+
+    .newsletter-form {
+        margin-top: 1.25rem;  /* Reduce top margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .popup-content {
+        padding: 1.25rem;  /* Further reduce padding */
+        width: 92%;  /* Slightly less wide on mobile */
+        max-width: 100%;
+    }
+
+    .close-popup {
+        top: 0.5rem;
+        right: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .newsletter-form {
+        margin-top: 1rem;
+    }
+
+    .newsletter-form input {
+        padding: 0.875rem;  /* Slightly smaller input padding */
+        margin-bottom: 0.875rem;  /* Reduce space between elements */
+    }
+
+    .newsletter-form button {
+        padding: 0.875rem;  /* Slightly smaller button padding */
+    }
+}

@@ -66,15 +66,22 @@
     cursor: pointer;
 }
 
+
+
 @media (max-width: 768px) {
-    .mobile-menu-btn {
-        display: block;
+    .navbar .container {
+        height: 70px;  /* Slightly smaller header on tablet */
     }
 
+    .logo {
+        font-size: 1.5rem;  /* Smaller logo text */
+    }
+
+    /* Your existing mobile menu styles are good, but let's enhance them */
     .nav-links {
         display: none;
         position: absolute;
-        top: 80px;
+        top: 70px;  /* Match new header height */
         left: 0;
         width: 100%;
         background: var(--white);
@@ -88,6 +95,7 @@
 
     .nav-links ul {
         flex-direction: column;
+        gap: 0;  /* Remove gap as we have padding on links */
     }
 
     .nav-links li {
@@ -97,9 +105,41 @@
     .nav-links a {
         display: block;
         padding: 1rem 2rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);  /* Subtle separators */
+    }
+
+    .nav-links li:last-child a {
+        border-bottom: none;  /* Remove border from last item */
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    main {
+        padding-top: 70px;  /* Match new header height */
     }
 }
 
-main {
-    padding-top: 80px;
-} 
+@media (max-width: 480px) {
+    .navbar .container {
+        height: 60px;  /* Even smaller header on mobile */
+        padding: 0.75rem var(--container-padding);  /* Reduce vertical padding */
+    }
+
+    .logo {
+        font-size: 1.3rem;  /* Even smaller logo text */
+    }
+
+    .nav-links {
+        top: 60px;  /* Match new header height */
+    }
+
+    .nav-links a {
+        padding: 0.875rem 1.5rem;  /* Slightly smaller padding */
+    }
+
+    main {
+        padding-top: 60px;  /* Match new header height */
+    }
+}
