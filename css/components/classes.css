@@ -43,8 +43,9 @@
     gap: 0.5rem;
 }
 
-.class-features i {
-    color: var(--accent-color);
+.class-features li i {
+    color: var(--primary-color);
+    margin-right: 0.5rem;
 }
 
 /* Using the same cta-button styling as other buttons */
