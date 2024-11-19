@@ -1,6 +1,6 @@
 .about-section {
     padding: var(--section-padding) 0;
-    background: var(--white);
+    background: var(--bg-light);
 }
 
 .about-grid {
@@ -59,4 +59,8 @@
     .stat-number {
         font-size: 1.75rem;
     }
+}
+
+.about-highlight {
+    color: var(--primary-color);
 }

@@ -1,12 +1,17 @@
 :root {
-    /* Colors */
-    --primary-color: #2563eb;
-    --secondary-color: #1e40af;
-    --accent-color: #f59e0b;
-    --accent-color-dark: #d97706;
-    --text-color: #1f2937;
-    --light-bg: #f3f4f6;
-    --white: #ffffff;
+    /* Primary colors */
+    --primary-color: #6C5CE7;      /* Bright purple from poster */
+    --primary-light: #8A7EFF;      /* Lighter purple for hover states */
+    --primary-dark: #4834d4;       /* Darker purple for contrast */
+    
+    /* Accent/Secondary colors */
+    --accent-color: #FFD93D;       /* Yellow from the checkmarks */
+    --text-light: #FFFFFF;         /* White text */
+    --text-color: #2D3436;         /* Dark text */
+    
+    /* Background colors */
+    --bg-gradient: linear-gradient(135deg, #6C5CE7 0%, #4834d4 100%);
+    --bg-light: #F8F9FE;           /* Light background for sections */
     
     /* Spacing */
     --container-width: 1200px;

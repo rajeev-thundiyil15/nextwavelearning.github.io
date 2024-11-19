@@ -11,17 +11,17 @@
 }
 
 .pricing-card {
-    background: var(--white);
+    background: var(--bg-light);
     border-radius: var(--border-radius-md);
     padding: 2rem;
     text-align: center;
     box-shadow: var(--shadow-md);
     transition: var(--transition-normal);
-    border: 2px solid var(--light-bg);
+    border: 2px solid var(--primary-color);
 }
 
 .pricing-card.featured {
-    border-color: var(--accent-color);
+    border-color: var(--primary-color);
     transform: scale(1.05);
 }
 

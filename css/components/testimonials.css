@@ -10,7 +10,7 @@
 }
 
 .testimonial-card {
-    background: var(--white);
+    background: var(--bg-light);
     padding: 2rem;
     border-radius: var(--border-radius-md);
     box-shadow: var(--shadow-md);
@@ -26,6 +26,7 @@
     display: flex;
     align-items: center;
     margin-top: 2rem;
+    color: var(--text-color);
 }
 
 .testimonial-author img {

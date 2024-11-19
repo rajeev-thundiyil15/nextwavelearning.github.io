@@ -112,3 +112,17 @@
         padding: 1.5rem;  /* Slightly reduce padding */
     }
 }
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+}
+
+.submit-btn {
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+.submit-btn:hover {
+    background: var(--primary-light);
+}

@@ -1,9 +1,14 @@
 .class-card {
-    background: var(--white);
+    background: var(--bg-light);
+    border: 1px solid var(--primary-light);
     border-radius: var(--border-radius-md);
     padding: 2rem;
     text-align: left;
     box-shadow: var(--shadow-md);
+}
+
+.class-card:hover {
+    border-color: var(--primary-color);
 }
 
 .class-card img {
@@ -123,4 +128,8 @@
         font-size: 0.9rem;  /* Smaller paragraph text */
         margin-bottom: 1rem;
     }
+}
+
+.class-price {
+    color: var(--primary-color);
 }
