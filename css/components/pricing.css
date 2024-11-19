@@ -66,10 +66,15 @@
     padding: 1rem 2rem;
     border-radius: 50px;
     background: var(--primary-color);
-    color: var(--white);
+    color: var(--text-light);
     text-decoration: none;
-    transition: var(--transition-normal);
-} 
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.pricing-button:hover {
+    background: var(--primary-light);
+}
 
 
 

@@ -56,16 +56,14 @@
     font-weight: 500;
     transition: var(--transition-normal);
     margin-top: 1rem;
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    transition: all 0.3s ease;
 }
 
-.class-card .cta-button.primary {
-    background: var(--accent-color);
-    color: var(--white);
-}
-
-.class-card .cta-button.primary:hover {
-    background: var(--accent-color-dark);
-    transform: translateY(-2px);
+.class-card .cta-button:hover {
+    background: var(--primary-light);
 }
 
 /* Optional: Add hover effect */

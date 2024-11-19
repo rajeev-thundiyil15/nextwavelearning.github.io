@@ -88,4 +88,26 @@
         max-width: 300px;
         text-align: center;
     }
+}
+
+/* For hero section buttons */
+.hero-buttons .cta-button {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: 2px solid var(--text-light);
+    transition: all 0.3s ease;
+}
+
+.hero-buttons .cta-button:hover {
+    background: var(--primary-light);
+}
+
+.hero-buttons .cta-button.secondary {
+    background: transparent;
+    border: 2px solid var(--text-light);
+}
+
+.hero-buttons .cta-button.secondary:hover {
+    background: var(--primary-light);
+    border-color: var(--primary-light);
 } 

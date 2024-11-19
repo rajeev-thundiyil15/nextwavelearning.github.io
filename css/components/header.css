@@ -21,13 +21,13 @@
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #2563eb;
+    color: var(--text-light);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .logo:hover {
-    color: #1d4ed8;
+    color: #c2d2ff;
 }
 
 .nav-links {
@@ -68,7 +68,16 @@
     color: var(--text-light);
 }
 
+.cta-button {
+    background: var(--primary-color);
+    color: var(--text-light);
+    border: 2px solid var(--text-light);
+}
 
+.cta-button:hover {
+    background: var(--primary-light);
+    color: var(--text-light);
+}
 
 @media (max-width: 768px) {
     .navbar .container {
