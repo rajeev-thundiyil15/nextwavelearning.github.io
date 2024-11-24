@@ -155,6 +155,10 @@
     main {
         padding-top: 70px;  /* Match new header height */
     }
+
+    .mobile-menu-btn {
+        display: block;
+    }
 }
 
 @media (max-width: 480px) {

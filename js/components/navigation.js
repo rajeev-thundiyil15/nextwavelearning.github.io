@@ -8,13 +8,8 @@ class Navigation {
     }
     
     init() {
-        // Handle scroll effects
         this.handleScroll();
-        
-        // Handle mobile menu
         this.handleMobileMenu();
-        
-        // Handle smooth scrolling
         this.handleSmoothScroll();
     }
     
@@ -29,9 +24,15 @@ class Navigation {
     }
     
     handleMobileMenu() {
-        this.mobileMenuBtn?.addEventListener('click', () => {
+        if (!this.mobileMenuBtn) return;
+        
+        this.mobileMenuBtn.addEventListener('click', () => {
             this.navLinks.classList.toggle('active');
             this.mobileMenuBtn.classList.toggle('active');
+            
+            // Update aria-expanded
+            const isExpanded = this.mobileMenuBtn.classList.contains('active');
+            this.mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
         });
     }
     
@@ -40,39 +41,22 @@ class Navigation {
             anchor.addEventListener('click', (e) => {
                 e.preventDefault();
                 const target = document.querySelector(anchor.getAttribute('href'));
-                target?.scrollIntoView({ behavior: 'smooth' });
-                
-                // Close mobile menu if open
-                this.navLinks.classList.remove('active');
-                this.mobileMenuBtn?.classList.remove('active');
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Close mobile menu if open
+                    this.navLinks.classList.remove('active');
+                    if (this.mobileMenuBtn) {
+                        this.mobileMenuBtn.classList.remove('active');
+                        this.mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                    }
+                }
             });
         });
     }
-} 
+}
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the menu button and nav links elements
-    const menuBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-    
-    // Add click event to menu button
-    menuBtn.addEventListener('click', function() {
-        // Toggle active class on both elements
-        menuBtn.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        
-        // Update aria-expanded attribute
-        const isExpanded = menuBtn.classList.contains('active');
-        menuBtn.setAttribute('aria-expanded', isExpanded);
-    });
-
-    // Close menu when clicking a link
-    const navLinksItems = document.querySelectorAll('.nav-links a');
-    navLinksItems.forEach(link => {
-        link.addEventListener('click', () => {
-            menuBtn.classList.remove('active');
-            navLinks.classList.remove('active');
-            menuBtn.setAttribute('aria-expanded', 'false');
-        });
-    });
+// Initialize the navigation
+document.addEventListener('DOMContentLoaded', () => {
+    new Navigation();
 }); 
