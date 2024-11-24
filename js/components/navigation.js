@@ -4,6 +4,9 @@ class Navigation {
         this.mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         this.navLinks = document.querySelector('.nav-links');
         
+        console.log('Mobile Menu Button:', this.mobileMenuBtn);
+        console.log('Nav Links:', this.navLinks);
+        
         this.init();
     }
     
@@ -24,15 +27,22 @@ class Navigation {
     }
     
     handleMobileMenu() {
-        if (!this.mobileMenuBtn) return;
+        if (!this.mobileMenuBtn) {
+            console.error('Mobile menu button not found');
+            return;
+        }
         
-        this.mobileMenuBtn.addEventListener('click', () => {
+        this.mobileMenuBtn.addEventListener('click', (e) => {
+            console.log('Mobile menu clicked');
+            
             this.navLinks.classList.toggle('active');
             this.mobileMenuBtn.classList.toggle('active');
             
-            // Update aria-expanded
             const isExpanded = this.mobileMenuBtn.classList.contains('active');
             this.mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
+            
+            e.preventDefault();
+            e.stopPropagation();
         });
     }
     
@@ -44,7 +54,6 @@ class Navigation {
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth' });
                     
-                    // Close mobile menu if open
                     this.navLinks.classList.remove('active');
                     if (this.mobileMenuBtn) {
                         this.mobileMenuBtn.classList.remove('active');
@@ -56,7 +65,7 @@ class Navigation {
     }
 }
 
-// Initialize the navigation
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, initializing Navigation');
     new Navigation();
 }); 
