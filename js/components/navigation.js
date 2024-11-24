@@ -49,3 +49,24 @@ class Navigation {
         });
     }
 } 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuBtn.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        this.setAttribute('aria-expanded', 
+            this.classList.contains('active'));
+    });
+
+    // Close menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        });
+    });
+}); 
