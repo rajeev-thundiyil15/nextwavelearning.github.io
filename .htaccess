@@ -1,0 +1,17 @@
+# Enable custom error documents
+ErrorDocument 404 /404.html
+
+# Ensure proper handling of character sets
+AddDefaultCharset UTF-8
+
+# Optional: Enable rewriting engine
+RewriteEngine On
+
+# Optional: Force HTTPS (uncomment if needed)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Optional: Remove .html extension (uncomment if needed)
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_FILENAME}\.html -f
+# RewriteRule ^(.*)$ $1.html [NC,L] 
