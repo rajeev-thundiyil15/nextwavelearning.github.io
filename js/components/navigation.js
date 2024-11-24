@@ -51,22 +51,28 @@ class Navigation {
 } 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    // Get the menu button and nav links elements
+    const menuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
-
-    mobileMenuBtn.addEventListener('click', function() {
-        this.classList.toggle('active');
+    
+    // Add click event to menu button
+    menuBtn.addEventListener('click', function() {
+        // Toggle active class on both elements
+        menuBtn.classList.toggle('active');
         navLinks.classList.toggle('active');
-        this.setAttribute('aria-expanded', 
-            this.classList.contains('active'));
+        
+        // Update aria-expanded attribute
+        const isExpanded = menuBtn.classList.contains('active');
+        menuBtn.setAttribute('aria-expanded', isExpanded);
     });
 
     // Close menu when clicking a link
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    const navLinksItems = document.querySelectorAll('.nav-links a');
+    navLinksItems.forEach(link => {
         link.addEventListener('click', () => {
-            mobileMenuBtn.classList.remove('active');
+            menuBtn.classList.remove('active');
             navLinks.classList.remove('active');
-            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            menuBtn.setAttribute('aria-expanded', 'false');
         });
     });
 }); 

@@ -127,23 +127,6 @@
     text-align: center;
 }
 
-/* Responsive Enhancements */
-@media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .stats-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .nav-links {
-        display: none;
-    }
-    
-    /* Add hamburger menu styles here */
-}
-
 /* Testimonials Section */
 .testimonials-section {
     padding: 6rem 0;
