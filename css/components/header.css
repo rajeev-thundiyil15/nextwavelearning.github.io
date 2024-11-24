@@ -65,6 +65,7 @@
         background: var(--bg-gradient);
         transition: 0.3s ease;
         opacity: 0;
+        z-index: 100;
     }
 
     .nav-menu.active {
@@ -85,6 +86,8 @@
     .nav-menu a {
         font-size: 1.2rem;
         color: var(--text-light);
+        display: block;
+        padding: 0.5rem 1rem;
     }
 
     .mobile-menu-btn .bar {
