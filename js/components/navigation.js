@@ -17,21 +17,23 @@ class Navigation {
 
     init() {
         this.menuBtn.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent any default behavior
+            e.preventDefault();
             console.log('Button clicked');
-            this.menuBtn.classList.toggle('active');
-            this.navMenu.classList.toggle('active');
-            console.log('Menu state:', this.navMenu.classList.contains('active'));
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!this.navMenu.contains(e.target) && 
-                !this.menuBtn.contains(e.target) && 
-                this.navMenu.classList.contains('active')) {
-                this.menuBtn.classList.remove('active');
+            
+            // Explicitly add/remove the active class
+            if (this.navMenu.classList.contains('active')) {
                 this.navMenu.classList.remove('active');
+                this.menuBtn.classList.remove('active');
+                console.log('Removing active class');
+            } else {
+                this.navMenu.classList.add('active');
+                this.menuBtn.classList.add('active');
+                console.log('Adding active class');
             }
+            
+            // Log the updated state
+            console.log('Menu classes after toggle:', this.navMenu.classList.value);
+            console.log('Button classes after toggle:', this.menuBtn.classList.value);
         });
     }
 }
