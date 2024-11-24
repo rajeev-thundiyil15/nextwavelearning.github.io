@@ -2,10 +2,12 @@ class Navigation {
     constructor() {
         this.menuBtn = document.querySelector('.mobile-menu-btn');
         this.navMenu = document.querySelector('.nav-menu');
+        this.navLinks = document.querySelectorAll('.nav-menu a');
         
         console.log('Initial state:', {
             menuBtn: this.menuBtn,
-            navMenu: this.navMenu
+            navMenu: this.navMenu,
+            navLinks: this.navLinks
         });
         
         this.init();
@@ -25,30 +27,28 @@ class Navigation {
 
             try {
                 if (isMenuOpen) {
-                    // Open menu
                     this.navMenu.classList.add('active');
                     this.menuBtn.classList.add('active');
-                    console.log('Added active class');
                 } else {
-                    // Close menu
                     this.navMenu.classList.remove('active');
                     this.menuBtn.classList.remove('active');
-                    console.log('Removed active class');
                 }
-
-                // Verify the change
-                console.log('Current classes:', {
-                    menu: this.navMenu.className,
-                    button: this.menuBtn.className
-                });
             } catch (error) {
                 console.error('Error toggling menu:', error);
             }
         });
+
+        this.navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                console.log('Nav link clicked, closing menu');
+                isMenuOpen = false;
+                this.navMenu.classList.remove('active');
+                this.menuBtn.classList.remove('active');
+            });
+        });
     }
 }
 
-// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     const nav = new Navigation();
 }); 
