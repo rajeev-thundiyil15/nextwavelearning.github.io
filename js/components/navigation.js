@@ -3,41 +3,52 @@ class Navigation {
         this.menuBtn = document.querySelector('.mobile-menu-btn');
         this.navMenu = document.querySelector('.nav-menu');
         
-        // Debug logs
-        console.log('Navigation initialized');
-        console.log('Menu Button:', this.menuBtn);
-        console.log('Nav Menu:', this.navMenu);
+        console.log('Initial state:', {
+            menuBtn: this.menuBtn,
+            navMenu: this.navMenu
+        });
         
-        if (this.menuBtn && this.navMenu) {
-            this.init();
-        } else {
-            console.error('Required elements not found');
-        }
+        this.init();
     }
 
     init() {
-        this.menuBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            console.log('Button clicked');
-            
-            // Explicitly add/remove the active class
-            if (this.navMenu.classList.contains('active')) {
-                this.navMenu.classList.remove('active');
-                this.menuBtn.classList.remove('active');
-                console.log('Removing active class');
-            } else {
-                this.navMenu.classList.add('active');
-                this.menuBtn.classList.add('active');
-                console.log('Adding active class');
+        if (!this.menuBtn || !this.navMenu) {
+            console.error('Required elements not found');
+            return;
+        }
+
+        let isMenuOpen = false;
+
+        this.menuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            console.log('Menu clicked, setting to:', isMenuOpen);
+
+            try {
+                if (isMenuOpen) {
+                    // Open menu
+                    this.navMenu.classList.add('active');
+                    this.menuBtn.classList.add('active');
+                    console.log('Added active class');
+                } else {
+                    // Close menu
+                    this.navMenu.classList.remove('active');
+                    this.menuBtn.classList.remove('active');
+                    console.log('Removed active class');
+                }
+
+                // Verify the change
+                console.log('Current classes:', {
+                    menu: this.navMenu.className,
+                    button: this.menuBtn.className
+                });
+            } catch (error) {
+                console.error('Error toggling menu:', error);
             }
-            
-            // Log the updated state
-            console.log('Menu classes after toggle:', this.navMenu.classList.value);
-            console.log('Button classes after toggle:', this.menuBtn.classList.value);
         });
     }
 }
 
+// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-    new Navigation();
+    const nav = new Navigation();
 }); 
