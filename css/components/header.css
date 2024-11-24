@@ -59,35 +59,36 @@
     .nav-menu {
         position: fixed;
         top: 70px;
-        right: -100%;
+        left: 0;
         width: 100%;
         height: calc(100vh - 70px);
-        background: var(--bg-gradient);
-        transition: 0.3s ease;
-        opacity: 0;
+        background-color: #333;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
         z-index: 100;
     }
 
     .nav-menu.active {
-        right: 0;
-        opacity: 1;
+        transform: translateX(0);
     }
 
     .nav-menu ul {
         flex-direction: column;
         align-items: center;
-        padding: 4rem 0;
+        padding: 2rem;
     }
 
     .nav-menu li {
-        margin: 1.5rem 0;
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
     }
 
     .nav-menu a {
+        color: white;
         font-size: 1.2rem;
-        color: var(--text-light);
         display: block;
-        padding: 0.5rem 1rem;
+        padding: 1rem;
     }
 
     .mobile-menu-btn .bar {
