@@ -2,18 +2,27 @@ class Navigation {
     constructor() {
         this.menuBtn = document.querySelector('.mobile-menu-btn');
         this.navMenu = document.querySelector('.nav-menu');
-        this.init();
+        
+        // Debug logs
+        console.log('Menu Button:', this.menuBtn);
+        console.log('Nav Menu:', this.navMenu);
+        
+        if (this.menuBtn && this.navMenu) {
+            this.init();
+        } else {
+            console.error('Required elements not found');
+        }
     }
 
     init() {
-        // Toggle menu on button click
-        this.menuBtn.addEventListener('click', () => {
-            console.log('Menu clicked');
+        this.menuBtn.addEventListener('click', (e) => {
+            console.log('Button clicked');
             this.menuBtn.classList.toggle('active');
             this.navMenu.classList.toggle('active');
+            console.log('Nav menu classes:', this.navMenu.classList);
         });
 
-        // Close menu when clicking a link
+        // Close menu when clicking links
         document.querySelectorAll('.nav-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 this.menuBtn.classList.remove('active');
@@ -23,7 +32,6 @@ class Navigation {
     }
 }
 
-// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new Navigation();
 }); 
