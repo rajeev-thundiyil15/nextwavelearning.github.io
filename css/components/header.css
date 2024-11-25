@@ -16,14 +16,13 @@
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 600;
+    display: block;
     color: var(--text-light);
-    letter-spacing: -0.5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
     transition: opacity 0.2s ease;
+    margin-bottom: 0;
 }
 
 .logo:hover {
