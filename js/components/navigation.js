@@ -48,6 +48,24 @@ class Navigation {
     }
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Only apply smooth scroll if we're on the main page
+    if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+        const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    }
+    // Rest of your navigation code...
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const nav = new Navigation();
 }); 
