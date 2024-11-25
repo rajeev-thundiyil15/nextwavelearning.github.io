@@ -84,13 +84,13 @@ ul {
 }
 
 .policy-content {
-    padding-top: 40px;
+    padding-top: 20px;
     margin-bottom: 40px;
 }
 
 /* Add specific styling for policy pages */
 .policy-page .policy-content {
-    padding-top: 120px;
+    padding-top: 20px;
 }
 
 .content-wrapper {
@@ -104,7 +104,7 @@ ul {
 /* Add specific styling for policy hero section */
 .policy-hero {
     min-height: 150px;
-    padding: 60px 0 20px;
+    padding: 80px 0 20px;
     background: var(--primary-color);
     color: var(--text-light);
 }
