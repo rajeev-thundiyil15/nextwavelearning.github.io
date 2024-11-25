@@ -90,5 +90,13 @@ ul {
 
 /* Add specific styling for policy pages */
 .policy-page .policy-content {
-    padding-top: 120px; /* Increased padding for policy pages */
+    padding-top: 120px;
+}
+
+.content-wrapper {
+    margin-top: 100px;
+    padding: 20px;
+    max-width: var(--container-width);
+    margin-left: auto;
+    margin-right: auto;
 }
