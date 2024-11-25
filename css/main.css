@@ -82,3 +82,13 @@ ul {
     background: var(--primary-light);
     border-color: var(--primary-light);
 }
+
+.policy-content {
+    padding-top: 80px;
+    margin-bottom: 40px;
+}
+
+/* Add specific styling for policy pages */
+.policy-page .policy-content {
+    padding-top: 120px; /* Increased padding for policy pages */
+}
