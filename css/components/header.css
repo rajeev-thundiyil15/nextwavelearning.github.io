@@ -16,9 +16,14 @@
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-light);
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    max-width: 200px;
 }
 
 .nav-menu ul {
@@ -110,5 +115,12 @@
 
     .mobile-menu-btn.active .bar:nth-child(3) {
         transform: rotate(-45deg) translate(8px, -8px);
+    }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .logo-img {
+        height: 32px;
     }
 }
