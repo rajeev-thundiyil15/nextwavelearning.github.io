@@ -84,8 +84,10 @@ ul {
 }
 
 .policy-content {
-    padding-top: 20px;
+    padding-top: 30px;
     margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
 }
 
 /* Add specific styling for policy pages */
@@ -94,7 +96,6 @@ ul {
 }
 
 .content-wrapper {
-    margin-top: 100px;
     padding: 20px;
     max-width: var(--container-width);
     margin-left: auto;
@@ -104,9 +105,12 @@ ul {
 /* Add specific styling for policy hero section */
 .policy-hero {
     min-height: 150px;
-    padding: 80px 0 20px;
+    padding: 120px 0 30px;
+    margin-top: -80px;
     background: var(--primary-color);
     color: var(--text-light);
+    position: relative;
+    z-index: 1;
 }
 
 .policy-hero .hero-content {
@@ -121,4 +125,10 @@ ul {
 .policy-hero p {
     font-size: 1rem;
     opacity: 0.9;
+}
+
+/* Ensure navbar stays on top */
+.navbar {
+    position: relative;
+    z-index: 2;
 }
